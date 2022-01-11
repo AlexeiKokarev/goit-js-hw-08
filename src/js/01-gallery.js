@@ -5,7 +5,7 @@ import 'simplelightbox/dist/simple-lightbox.min.css';
 
 const galleryEl = document.querySelector(".gallery");
 
-const markup = galleryItems
+const gallMarkup = galleryItems
     .map(element => {
         return `<div class="gallery__item">
     <a class="gallery__item" href="${element.original}">
@@ -19,6 +19,6 @@ const markup = galleryItems
     })
     .join('');
 
-galleryEl.insertAdjacentHTML("afterbegin", markup);
+galleryEl.insertAdjacentHTML("afterbegin", gallMarkup);
 
 new SimpleLightbox('.gallery a', { captionType: 'attr', captionDelay: 250, captionsData: 'alt' });
